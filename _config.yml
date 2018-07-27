@@ -15,8 +15,8 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.zchi.me
 root: /
-permalink: :year-:month-:title/
-permalink_defaults: default/:title/
+permalink: :year/:month/:title/
+permalink_defaults: 
 
 # Directory
 source_dir: source
