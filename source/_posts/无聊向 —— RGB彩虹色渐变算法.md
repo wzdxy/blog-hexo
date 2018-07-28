@@ -2,6 +2,7 @@
 title: 无聊向 —— RGB彩虹色渐变算法
 date: 2016-09-19 08:03:30
 tags: 
+permalink: rainbow-colors-grndient
 ---
 
 最近在做IFE的课程，其中有一道题是展示队列排序的可视化过程，做好了之后是酱婶的：

@@ -4,6 +4,7 @@ date: 2016-11-02 14:05:15
 tags: 
 - Yii2
 - PHP
+permalink: phpstorm-debug
 ---
 
 给PHP打断点调试，需要PHP、浏览器，IDE三个方面的同时协作，所以整个配置也就需要三个方面。

@@ -2,6 +2,7 @@
 title: SQL Server 远程连接配置
 date: 2017-03-27 03:51:32
 tags: 
+permalink: sql-server-link-options
 ---
 
 1. sql server 配置管理器：

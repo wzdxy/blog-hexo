@@ -3,6 +3,7 @@ title: 使用 Tasksel 快速安装 LAMP 环境
 date: 2017-06-29 15:49:54
 tags: 
 - Linux
+permalink: taskel-lamp
 ---
 
 `tasksel`是可以一键安装多种集成环境的软件.

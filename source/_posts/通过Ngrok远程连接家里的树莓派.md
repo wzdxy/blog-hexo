@@ -5,6 +5,7 @@ tags:
 - 树莓派
 - Linux
 - SSH
+permalink: ngrok-link-raspberrypi
 ---
 
 1、登录http://www.ngrok.cc/ 官网注册并新增一个隧道，选择TCP协议，端口号随遍写一个，本地IP在树莓派上执行`ifconfig`查看，保存后复制获得的`id`

@@ -5,6 +5,7 @@ tags:
 - Javascript
 - 前端
 - HTML
+permalink: attr-data-dateset
 ---
 
 - 使用`jquery`的`data()`函数写入的属性，用dataset属性和attr()方法均不能读取，除此之外都可以相互读取。

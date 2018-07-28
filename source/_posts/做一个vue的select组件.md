@@ -3,6 +3,7 @@ title: 做一个vue的select组件
 date: 2017-07-06 14:11:11
 tags: 
 - vue
+permalink: vue-select-demo
 ---
 
 组件接收两个 `prop` 一个是选中的值 `value`, 和父级的数据绑定, 用 `.sync` 修饰, 另一个是选项数组

@@ -4,6 +4,7 @@ date: 2017-07-11 12:52:39
 tags: 
 - windows
 - software
+permalink: win10-xunlei-folder-icon
 ---
 
 1. 不可直接重命名

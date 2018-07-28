@@ -4,6 +4,7 @@ date: 2017-08-20 06:20:02
 tags: 
 - software
 - notepad++
+permalink: npp-reg-replace-string
 ---
 
 ### 1. 查找目标

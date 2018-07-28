@@ -3,6 +3,7 @@ title: 给gitpage添加submodule子模块遇到的一个坑
 date: 2016-11-04 01:06:22
 tags: 
 - Git
+permalink: git-submodule-issue
 ---
 
 ### Git Submodule 

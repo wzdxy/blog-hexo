@@ -2,6 +2,7 @@
 title: Let's Encrypt 申请通配符证书
 date: 2018-07-28 18:16:16
 tags:
+permalink: letsencrypt-ssl
 ---
 
 从2018年3月开始, [Let's Encript](https://letsencrypt.org/) 支持通配符证书, 也就是一个域名下的多个子域名, 只需要申请一个证书.

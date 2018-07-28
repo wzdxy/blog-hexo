@@ -3,6 +3,7 @@ title: Web安全学习笔记----注入攻击
 date: 2017-06-27 23:08:05
 tags: 
 - 前端
+permalink: security-study-injection
 ---
 
 ## 关键条件:

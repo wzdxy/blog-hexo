@@ -5,6 +5,7 @@ tags:
 - 前端
 - weex
 - Android
+permalink: weex-start-android
 ---
 
 ## 准备 weex 

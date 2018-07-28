@@ -2,6 +2,7 @@
 title: 在 electron 中使用 ffi
 date: 2017-11-30 20:26:08
 tags: 
+permalink: electron-ffi
 ---
 
 [https://github.com/wzdxy/electron-ffi-demo](https://github.com/wzdxy/electron-ffi-demo)

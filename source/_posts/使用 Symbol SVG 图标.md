@@ -5,6 +5,7 @@ tags:
 - 前端
 - HTML
 - SVG
+permalink: icon-font-svg
 ---
 
 ### 一. 绘制图标 , 得到多个 SVG 文件

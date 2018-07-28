@@ -5,6 +5,7 @@ tags:
 - Linux
 - Yii2
 - Apache
+permalink: ubuntu-yii2
 ---
 
 ## `var/www` 目录下 `git clone` 没有权限
