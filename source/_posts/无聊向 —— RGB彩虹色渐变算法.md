@@ -2,6 +2,7 @@
 title: 无聊向 —— RGB彩虹色渐变算法
 date: 2016-09-19 08:03:30
 tags: 
+- 前端
 permalink: rainbow-colors-grndient
 ---
 

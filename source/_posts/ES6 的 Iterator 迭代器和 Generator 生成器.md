@@ -3,6 +3,7 @@ title: ES6 的 Iterator 迭代器和 Generator 生成器
 date: 2018-03-07 03:40:49
 tags: 
 - Javascript
+- 前端
 permalink: es6-iterator-generator
 ---
 

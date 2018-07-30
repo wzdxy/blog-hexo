@@ -3,6 +3,7 @@ title: 做一个vue的select组件
 date: 2017-07-06 14:11:11
 tags: 
 - vue
+- 前端
 permalink: vue-select-demo
 ---
 

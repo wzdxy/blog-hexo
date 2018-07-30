@@ -2,6 +2,8 @@
 title: Let's Encrypt 申请通配符证书
 date: 2018-07-28 18:16:16
 tags:
+- Linux
+- HTTPS
 permalink: letsencrypt-ssl
 ---
 

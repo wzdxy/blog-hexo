@@ -2,6 +2,8 @@
 title: SQL Server 远程连接配置
 date: 2017-03-27 03:51:32
 tags: 
+- 数据库
+- SQL Server
 permalink: sql-server-link-options
 ---
 
