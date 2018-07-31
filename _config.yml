@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: zchi's Blog
-subtitle: Just a Blog
+title: 网中的小鱼
+subtitle: Just Notes
 description: 写代码的
-keywords: zchi, wzdxy, blog, 前端
+keywords: zchi, wzdxy, blog, 前端, 网中的小鱼
 author: 网中的小鱼
 language: zh-CN
 timezone:
@@ -87,3 +87,6 @@ algolia:
   chunkSize: 5000
 
 algolia_search:
+
+links:
+  幻凡ss: http://hfanss.com/
