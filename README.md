@@ -1,6 +1,6 @@
 ## 博客地址
 
-[https://blog.zchi.me](https://blog.zchi.me) 
+[https://blog.zchi.me](https://blog.wzdxy.com) 
 
 即将迁移至
 [https://blog.wzdxy.com](https://blog.wzdxy.com) (备案中)
