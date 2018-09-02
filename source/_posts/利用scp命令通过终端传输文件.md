@@ -23,6 +23,7 @@ usage: scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
 ```bash
 scp -i ~/.ssh/key.pem ~/web/index.html username@xx.xx.xx.xx:/var/www/web/index.html 
 ```
+<!-- more -->
 服务器下载到本地 (使用密钥)
 ```bash
 scp  -i ~/.ssh/key.pem username@xx.xx.xx.xx:/var/www/web/index.html ~/web/index.html
