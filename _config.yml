@@ -88,6 +88,13 @@ algolia:
 
 algolia_search:
 
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_counter_security:
+  enable_sync: true  
+  app_id: 0zs8aW7Opyl8pbuGg7lguhrp-gzGzoHsz #<app_id>
+  app_key: AuGmnP2B16ch4AEUjBPY3VhD #<app_key>
+
 links:
   幻凡ss: https://hfanss.com/
   TaylorTaurus’ Blog: https://blog.taylortaurus.top
