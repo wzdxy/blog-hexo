@@ -5,6 +5,10 @@
   "hexo": {
     "version": "3.7.1"
   },
+  "scripts": {
+    "g": "hexo clean && hexo g -w",
+    "serve": "live-server ./public"
+  },
   "dependencies": {
     "hexo": "^3.2.0",
     "hexo-algolia": "^1.2.5",
