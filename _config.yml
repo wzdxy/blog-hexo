@@ -4,9 +4,9 @@
 
 # Site
 title: 网中的小鱼
-subtitle: wzdxy.com
+subtitle: wzdxy
 description: 写代码的
-keywords: 网中的小鱼, wzdxy, 网中的小鱼博客, zchi, blog, 前端, wzdxy.com, blog.wzdxy.com, 
+keywords: 网中的小鱼, wzdxy, 网中的小鱼博客, zchi, blog, 前端, wzdxy.com, blog.wzdxy.com, zchi.me, blog.zchi.me
 author: 网中的小鱼
 language: zh-CN
 timezone:
@@ -87,6 +87,13 @@ algolia:
   chunkSize: 5000
 
 algolia_search:
+
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_counter_security:
+  enable_sync: true  
+  app_id: 0zs8aW7Opyl8pbuGg7lguhrp-gzGzoHsz #<app_id>
+  app_key: AuGmnP2B16ch4AEUjBPY3VhD #<app_key>
 
 links:
   幻凡ss: https://hfanss.com/
