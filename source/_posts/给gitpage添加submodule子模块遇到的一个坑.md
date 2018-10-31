@@ -24,7 +24,7 @@ permalink: git-submodule-issue
 
 搜不到相关的问题之后，翻到了rep的setting页，原来这里已经给我报了一个错误
 
-![](http://odovakhft.bkt.clouddn.com/QQ%E6%8B%BC%E9%9F%B3%E6%88%AA%E5%9B%BE%E6%9C%AA%E5%91%BD%E5%90%8D.png)
+![](https://static.wzdxy.com/img/QQ%E6%8B%BC%E9%9F%B3%E6%88%AA%E5%9B%BE%E6%9C%AA%E5%91%BD%E5%90%8D.png)
 
 意思是要用https协议来引入子模块，带着这个关键字，终于搜到了一篇博客
 
@@ -33,7 +33,7 @@ http://blog.k-res.net/archives/1595.html
 看来果然是协议的问题
 
 到`.gitmodules`文件里把git库的ssh链接换成https的链接
-![](http://odovakhft.bkt.clouddn.com/QQ%E6%8B%BC%E9%9F%B3%E6%88%AA%E5%9B%BE%E6%9C%AA%E5%91%BD1%E5%90%8D.png)
+![](https://static.wzdxy.com/img/QQ%E6%8B%BC%E9%9F%B3%E6%88%AA%E5%9B%BE%E6%9C%AA%E5%91%BD1%E5%90%8D.png)
 ```js
 git submodule sync
 git submodule update  //不知道有没有必要

@@ -7,15 +7,15 @@ permalink: rainbow-colors-grndient
 ---
 
 最近在做IFE的课程，其中有一道题是展示队列排序的可视化过程，做好了之后是酱婶的：
-![](http://odovakhft.bkt.clouddn.com/772107-20160402085414910-1600247409.png)
+![](https://static.wzdxy.com/img/772107-20160402085414910-1600247409.png)
 有序的部分灰度按照大小排列，感觉有点丑，突然想炫酷一下，做成彩虹色渐变的，红橙黄绿青蓝紫
 
 <!-- more -->
 
 先搜集到七种颜色的RGB值，放到Excel里统计一下
-![](http://odovakhft.bkt.clouddn.com/772107-20160402085819238-2080422995.png =100*100)
+![](https://static.wzdxy.com/img/772107-20160402085819238-2080422995.png =100*100)
 然后做个图
-![](http://odovakhft.bkt.clouddn.com/772107-20160402085837910-1763180542.png)
+![](https://static.wzdxy.com/img/772107-20160402085837910-1763180542.png)
 这个色彩规律看起来还是出乎意料的明朗嘛，全都是线性的
 按照初中数学的方法，把图像分成五部分，分段求解，很容易就列出方程来了：
 
@@ -52,9 +52,9 @@ nLi[i].style.color='rgb('+(r-80)+','+(g-80)+','+(b-80)+')';    //柱体上的数
 ++i;
 ```
 完工：
-![](http://odovakhft.bkt.clouddn.com/772107-20160402090941035-2027216672.png)
+![](https://static.wzdxy.com/img/772107-20160402090941035-2027216672.png)
 演示地址：http://wzdxy.github.io/ife/t19.html
 
-######UPDATE:
+###### UPDATE:
 原来用 CSS3的HSL 可以直接实现，囧
-![](http://odovakhft.bkt.clouddn.com/772107-20160406233005562-836110171.gif)
+![](https://static.wzdxy.com/img/772107-20160406233005562-836110171.gif)

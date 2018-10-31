@@ -38,31 +38,31 @@ xdebug.idekey=PHPSTORM
 
 1.  `File > settings > Languages&Framworks > PHP > Debug`，配置如图
 
-![](http://odovakhft.bkt.clouddn.com/PhpStorm%E9%85%8D%E7%BD%AE1.png?imageView/2/w/800)
+![](https://static.wzdxy.com/img/PhpStorm%E9%85%8D%E7%BD%AE1.png?imageView/2/w/800)
 
 2.  `Run > Edit Configurations`
 
 - 左上角加号添加 `PHP Remote Debug`
 
-![左上角加号添加 `PHP Remote Debug`](http://odovakhft.bkt.clouddn.com/%E9%A1%B9%E7%9B%AEdebug1.png?imageView/2/w/800)
+![左上角加号添加 `PHP Remote Debug`](https://static.wzdxy.com/img/%E9%A1%B9%E7%9B%AEdebug1.png?imageView/2/w/800)
 
 - 设置`Servers`和`idekey`，并命名为`T1`
 
-![设置`Servers`和`idekey`](http://odovakhft.bkt.clouddn.com/%E9%A1%B9%E7%9B%AEdebug2.png?imageView/2/w/800)
+![设置`Servers`和`idekey`](https://static.wzdxy.com/img/%E9%A1%B9%E7%9B%AEdebug2.png?imageView/2/w/800)
 
 点击上图的 `Servers` 右侧的三点按钮，在下图中点击左上角加号，添加Server
 
-![设置`Servers`和`idekey`](http://odovakhft.bkt.clouddn.com/%E9%A1%B9%E7%9B%AEdebug3.png?imageView/2/w/800)
+![设置`Servers`和`idekey`](https://static.wzdxy.com/img/%E9%A1%B9%E7%9B%AEdebug3.png?imageView/2/w/800)
 
 ### 3. 配置Chrome的Xdebug扩展
 
 - 下载Xdebug helper 
 
-![](http://odovakhft.bkt.clouddn.com/chrome%E4%B8%8B%E8%BD%BDxdebug.png?imageView/2/w/800)
+![](https://static.wzdxy.com/img/chrome%E4%B8%8B%E8%BD%BDxdebug.png?imageView/2/w/800)
 
 -  `右键扩展图标 > 选项` ，配置 `IDE key`
 
-![](http://odovakhft.bkt.clouddn.com/xdebug%E6%89%A9%E5%B1%951.png?imageView/2/w/800)
+![](https://static.wzdxy.com/img/xdebug%E6%89%A9%E5%B1%951.png?imageView/2/w/800)
 
 ### 4. 开始调试
 
@@ -70,4 +70,4 @@ xdebug.idekey=PHPSTORM
  - 在`Phpstoem`中给PHP文件添加断点，`Run > Debug 'T1'`
  - 使用Chrome打开localhost,单击Xdebug图标，点击Debug启用
 
- ![](http://odovakhft.bkt.clouddn.com/xdebug%E5%90%AF%E5%8A%A8.png)
+ ![](https://static.wzdxy.com/img/xdebug%E5%90%AF%E5%8A%A8.png)

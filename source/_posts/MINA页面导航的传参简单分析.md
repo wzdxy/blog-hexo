@@ -25,7 +25,7 @@ onLoad(options){
 }
 ```
 输出：
-![](http://odovakhft.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160929232130.png)
+![](https://static.wzdxy.com/img/QQ%E6%88%AA%E5%9B%BE20160929232130.png)
 
 为了传递比较复杂的参数，可以将OBJECT转成JSON作为查询字符串传入，在新页面解析出来。
 ```js
@@ -42,4 +42,4 @@ onLoad(options){
 ```
 
 这样就拿到了要传递的对象了：
-![](http://odovakhft.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160929232701.png)
+![](https://static.wzdxy.com/img/QQ%E6%88%AA%E5%9B%BE20160929232701.png)
