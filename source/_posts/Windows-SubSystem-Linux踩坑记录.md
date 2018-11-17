@@ -36,6 +36,27 @@ permalink: wsl-start
 - 软连接挂载常用目录 `ln -s /mnt/e e`
 ![](https://static.wzdxy.com/img/sc_2018-11-03_12-57-10.png)
 
+## 让终端能走梯子
+- 不需要在 linux 中安装 ss , 可以直接利用 windows 上 ss 的代理
+```ini
+# ~/.bashrc 或 ~/zshrc
+export http_proxy="http://127.0.0.1:1080"
+export https_proxy="http://127.0.0.1:1080"
+```
+
+## 安装oh my zsh
+1. 安装 zsh , `sudo apt-get install zsh`
+2. 安装 oh my zsh
+```shell
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
+3. 设置为默认终端
+```ini
+# ~/.bash_profile (适用于 cmder , vscode)
+exec zshh
+source .zshrc
+```
+
 ## 配置开发环境
 ### 设为 vscode 默认终端
 1. 设置 `"terminal.integrated.shell.windows": "C:\\Windows\\Sysnative\\bash.exe" `
