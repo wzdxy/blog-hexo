@@ -36,6 +36,27 @@ permalink: wsl-start
 - 软连接挂载常用目录 `ln -s /mnt/e e`
 ![](https://static.wzdxy.com/img/sc_2018-11-03_12-57-10.png)
 
+## 让终端能走梯子
+- 不需要在 linux 中安装 ss , 可以直接利用 windows 上 ss 的代理
+```ini
+# ~/.bashrc 或 ~/zshrc
+export http_proxy="http://127.0.0.1:1080"
+export https_proxy="http://127.0.0.1:1080"
+```
+
+## 安装oh my zsh
+1. 安装 zsh , `sudo apt-get install zsh`
+2. 安装 oh my zsh
+```shell
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+```
+3. 设置为默认终端
+```ini
+# ~/.bash_profile (适用于 cmder , vscode)
+exec zshh
+source .zshrc
+```
+
 ## 配置开发环境
 ### 设为 vscode 默认终端
 1. 设置 `"terminal.integrated.shell.windows": "C:\\Windows\\Sysnative\\bash.exe" `
@@ -52,5 +73,16 @@ permalink: wsl-start
 从截图看出我在 Ubuntu 上只装了一个 gulp, 但我运行 `parcel`, `hexo` 等 windows 上安装的全局包时, 却可以正常运行, 而 hexo 的 info 显示使用的 Node 是 Linux 上的.
 也就是说, 只要子系统安装了 node, 就可以在 Linux 环境直接调用 windows 下的 npm 包, 不需要单独安装, 不过还没测试过本地编译的包能不能用.
 (我怎么感觉这是个环境变量混乱导致的 BUG, 还需要再了解一下 WSL 和 windows 交互的特性啊)
+
+## 配置换行符为 LF
+windows 下默认的换行方式是 `CRLF`, 而大家在协作时通用的代码换行方式是 Unix 系的 `LF` 换行, (Mac OS 从前使用 `CR`, 现已经改为 `LF`)
+在 windows 系统中, VCS 通常采用 `autocrlf` 的办法来解决问题, 在检出代码时将 `LF` 替换为 `CRLF`, 提交时再替换回 `LF`, 以此保证提交的代码和使用 Linux/Mac 的小伙伴一致.
+但是在 WSL 中, Linux 和 windows 的文件系统是互通的, 这就会导致问题, 尤其是使用WSL中的 git 时. 如果开启 autocrlf, 在 WSL 的 git 检出代码时, 会得到 windows 默认的 CRLF 换行, 在 windows 中这符合预期, 但如果我们在 Linux 使用 git 安装一些程序, 这些程序的代码就会出错 (因为 Linux 的文件系统不应该出现 CRLF 换行符), 所以我们在 windows 系统中也使用 `LF` 换行:
+1. 关闭 windows 中 git 的自动转换 `git config --global core.autocrlf false` (避免 clone 的代码出现 CRLF)
+2. 配置编辑器的默认换行符为 `LF`
+    - `vscode` : `Text editor - Files - the default end of the line character
+    - `webstorm` : `Editor - Code Style - Line separator - Unix and OS X`
+    - `Notepad++` : `首选项 - 新建 - 格式 - Unix`
+3. 杜绝使用 windows 自带的 `记事本`
 
 ## To Be Continue...

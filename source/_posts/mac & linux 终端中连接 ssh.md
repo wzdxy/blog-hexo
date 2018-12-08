@@ -26,3 +26,6 @@ IdentityFile ~/.ssh/id_rsa # 私钥文件的路径
 ```
 
 使用: `ssh servername` , 支持 `tab` 补全
+
+### 现在 windows10 也支持这些 ssh 操作了~
+在 CMD 和 PowerShell 里都可以用
