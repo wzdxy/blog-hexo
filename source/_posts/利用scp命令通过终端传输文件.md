@@ -44,4 +44,6 @@ scp  -r ~/web vps1:/var/www/web
 ```
 scp: /var/www/index.html: Permission denied
 ```
-目标目录没有写入权限, 可以先复制到有权限的文件夹(如`/tmp`), 再 ssh 到服务器上进行操作
+目标目录没有写入权限, 可以先复制到有权限的文件夹(如`/tmp`), 再 ssh 
+
+## windows 已支持 scp 命令, 在 Powershell 中操作即可

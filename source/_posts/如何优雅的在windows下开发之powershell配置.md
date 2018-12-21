@@ -24,8 +24,16 @@ permalink: windows-powershell-start
     Install-Module posh-git
     Install-Module -Name git-aliases -RequiredVersion 0.0.1 -AllowClobber
     ```
+3. `pshazz` (可选) 
+    - 一个软件可用代替前面两个, 实现 git 增强和别名
+    - 优点是解决了前者在 vscode 中光标容易错位的 bug
+    - 但UI不如前面好看
+    - 安装 (使用 scoop 安装, 如果没有, 需先安装 scoop)
+    ```powershell
+    scoop install pshazz
+    ```
 
-3. 创建  Microsoft.PowerShell_profile.ps1
+4. 创建  Microsoft.PowerShell_profile.ps1
     ```powershell
     $PROFILE    // 查看配置文件的全路径
     code $PROFILE // 使用 vscode 打开(或创建)配置文件, notepad 也可以
@@ -49,7 +57,7 @@ permalink: windows-powershell-start
 1. **VS Code**: `code` 即可新开 一个 vscode , 参数可以是文件(编辑文件) 或 路径 (打开为工作区).
 2. **NotePad++**: 将安装目录加入环境变量, `notepad++.exe` 即可, 想偷懒的话可以将 `notepad++.exe` 复制一个为 `npp.exe`, 就可以用 `npp` 调用了
 
-## 使用VSCode调试 Powershell 脚本
+## 使用VSCode调试 Powershell 脚本 
 - **安装扩展** `PowerShell`
 - **创建文件** Powershell 脚本使用 `ps1` 作为文件后缀
     ```powershell
@@ -60,6 +68,17 @@ permalink: windows-powershell-start
 - **开始调试**
     按F5即可执行, 支持断点
 - 如果无法重复调试, 在 VSCode 的设置中勾选 `Create Temporary Integrated Console`
+
+## 在 Powershell 中使用 SS 代理
+1. 在 ss 中允许局域网的连接/允许其他设备连入
+2. 在终端执行
+    ```powershell
+    netsh winhttp import proxy source=ie
+    # 如果成功会返回下面内容
+    当前的 WinHTTP 代理服务器设置:
+    代理服务器:  127.0.0.1:1080
+    ...
+    ```    
 
 ## 常用命令
 
