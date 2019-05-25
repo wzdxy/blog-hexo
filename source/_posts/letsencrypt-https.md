@@ -12,30 +12,37 @@ permalink: letsencrypt-ssl
 
 <!-- more -->
 
-1. 下载脚本, 并配置权限
+1. 安装 certbot 和 python-certbot-nginx
 ```bash
-wget https://dl.eff.org/certbot-auto
-chmod a+x certbot-auto 
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install certbot python-certbot-nginx 
 ```
-2. 执行脚本
+
+2. 安装 certbot dnspod 插件
+```bash
+# 需安装 pip3
+pip3 install certbot-dns-dnspod
 ```
-./certbot-auto certonly  -d *.zchi.me --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory
-```
-    - 其中 *.zchi.me 就是自己的域名
-    - 执行脚本后,  会安装一些依赖, 需要点击一下 Y 允许
-    - 然后会有所有权验证, 在自己域名的 DNS 里添加一个 TEXT 解析
-    - 完成
+3. 执行脚本
+```bash
+# 其中 wzdxy.com 就是自己的域名
+sudo certbot certonly -a certbot-dns-dnspod:dns-dnspod --certbot-dns-dnspod:dns-dnspod-credentials ~/dnspod/credentials.ini -d wzdxy.com -d "*.wzdxy.com"
+``` 
 
 3. 记住生成的证书和 key, 在服务器里配置 ssl
 ```ini
 server{
     listen 80;
     listen [::]:80;
-    server_name blog.zchi.me;
+    server_name blog.wzdxy.com;
     root /var/www/blog-hexo/public;
     listen 443 ssl;
-    ssl_certificate /etc/letsencrypt/live/zchi.me/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/zchi.me/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/wzdxy.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/wzdxy.com/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
     if ($scheme != "https") {
