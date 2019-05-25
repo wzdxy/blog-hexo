@@ -1,0 +1,111 @@
+.site-nav {
+  border-top: none;
+
+  +tablet() {
+    display: none !important;
+  }
+}
+
+.site-nav-on {
+  +tablet() {
+    display: block !important;
+  }
+}
+
+.menu .menu-item {
+  display: block;
+  margin: 0;
+  &:nth-child(1) {
+    a {
+      color #3b91f7;
+    }
+  }
+  &:nth-child(2) {
+    a {
+      color #70c040;
+    }
+  }
+  &:nth-child(3) {
+    a {
+      color #ff6360;
+    }
+  }
+  &:nth-child(4) {
+    a {
+      color #fbab25;
+    }
+  }
+  &:nth-child(5) {
+    a {
+      color #cf75dc;
+    }
+  }
+  a {
+    position: relative;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    text-align: left;
+    line-height: inherit;
+    transition-property: background-color;
+    the-transition();
+        
+    &:hover {
+      background: #f9f9f9;
+      border-bottom-color: white;
+    }
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 5px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: $grey-light;
+    border-radius: 10px;
+    float: right;
+    margin: 0.35em 0 0 0;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+  }
+
+  br { display: none; }
+}
+
+.menu-item-active a {
+  @extend .menu .menu-item a:hover;
+
+  badges = hexo-config('menu_settings.badges');
+  if not badges {
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      margin-top: -3px;
+      right: 15px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $grey;
+    }
+  }
+
+}
+
+.btn-bar {
+  background-color: white;
+}
+
+.site-nav-toggle {
+  left: 20px;
+  top: 50%;
+
+  -webkit-transform:  translateY(-50%);
+  transform:  translateY(-50%);
+
+  +tablet() {
+    display: block;
+  }
+}
