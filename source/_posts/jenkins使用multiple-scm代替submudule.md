@@ -21,13 +21,13 @@ permalink: jenkins-mutiple-scm
 
 ### Jenkins 部署失败
 
-按照正常的部署流程, 在博客或主题更新之后, `git pull` 或 `git submodule update` 即可获取更新. 
+按照正常的部署流程, 在博客或主题更新之后, `git pull` 或 `git submodule update` 即可获取更新.
 
-但是在部署 Jenkins 时, 缺在更新子仓库步骤上出了问题.
+但是在部署 Jenkins 时, 缺在更新子仓库步骤上出了问题.
 
 ![](https://static.wzdxy.com/img/Xnip2018-08-16_21-56-37.png)
 
-不知道为什么, Jenkins 在尝试拉取 `submodule` 时, 可能没有使用正确的凭据, 没能成功更新 `next` 仓库. 在网上搜索发现很多人遇到了相同的问题. 也有很多人提出了多种解决方案, 尝试了几种配置 Jenkins 的方案, 都没成功. 有人说是 Jenkins 旧版本的 bug, 但我比较新的版本貌似也没解决
+不知道为什么, Jenkins 在尝试拉取 `submodule` 时, 可能没有使用正确的凭据, 没能成功更新 `next` 仓库. 在网上搜索发现很多人遇到了相同的问题. 也有很多人提出了多种解决方案, 尝试了几种配置 Jenkins 的方案, 都没成功. 有人说是 Jenkins 旧版本的 bug, 但我比较新的版本貌似也没解决
 
 [Stack Overflow - git-submodules-not-updating-in-jenkins-build](https://stackoverflow.com/questions/9953299/git-submodules-not-updating-in-jenkins-build)
 
@@ -40,13 +40,13 @@ permalink: jenkins-mutiple-scm
 
 ![](https://static.wzdxy.com/img/Xnip2018-08-16_23-01-28.png)
 
-### multiple SCMs
+### multiple SCMs
 
-一般来说, Jenkins 一个项目只有一个 SCM, 但 `multiple SCMs` 这个插件, 允许在工作目录下的任意目录`checkout`另外的仓库, 这样就(在一定程度上)起到了和 `git submodule` 相同的作用.
+一般来说, Jenkins 一个项目只有一个 SCM, 但 `multiple SCMs` 这个插件, 允许在工作目录下的任意目录`checkout`另外的仓库, 这样就(在一定程度上)起到了和 `git submodule` 相同的作用.
 
 1. 首先删掉 hexo 中的 submodule, 使两个仓库独立
 2. 安装并配置`multiple SCMs`, 将 `next` 仓库拉到 `themes/next` 目录下
-3. 在 `next` 主题的仓库也添加一个 `webhook` 指向 `Jenkins` , 不论主题还是博客有修改, 都能触发构建.
+3. 在 `next` 主题的仓库也添加一个 `webhook` 指向 `Jenkins` , 不论主题还是博客有修改, 都能触发构建.
 
 ![](https://static.wzdxy.com/img/blog-hexo-github-multi-scm.png)
 
@@ -54,4 +54,4 @@ permalink: jenkins-mutiple-scm
 
 - 对于部署 hexo 的主题而言, 多个仓库直接嵌套就可以了, 博客和主题完全解耦, 可以独立维护.
 - 其实 `git submodule` 这种工作方式本身就很繁琐, 不管是对子仓库做添加, 更新, 还是删除的操作, 都很麻烦.
-- 有方便的 CI 的话, `git submodule` 很多时候都可以不用了, 当然如果项目复杂, 依赖很多, 在开发环境下使用手动管理方式还是不够高效.
+- 有方便的 CI 的话, `git submodule` 很多时候都可以不用了, 当然如果项目复杂, 依赖很多, 在开发环境下使用手动管理方式还是不够高效.
