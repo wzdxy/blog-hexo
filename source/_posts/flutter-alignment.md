@@ -1,5 +1,5 @@
 ---
-title: post
+title: Flutter Alignment 属性总结和应用(雪碧图)
 date: 2019-09-28 22:44:42
 tags:
 - Flutter
@@ -18,6 +18,7 @@ permalink: flutter-alignment
 **调用: Alignment(x, y) , x y 分别表示水平和垂直方向的偏移 , 初始值均为 0**
 **-1 表示图片最左侧 , 1表示图片最右侧**
 **虽然实际上容器是不动的 , 偏移的是图片, 但为了便于理解, 可以认为图片静止, 容器是一个移动的选区 , 确定位置后"抠"出图来显示到界面, 如下图 (虚线框代表容器) :**
+<!-- more -->
 ![11123334.gif](https://cdn.nlark.com/yuque/0/2019/gif/170329/1569601470711-6528bd66-3315-45bd-bd18-2fc8627cbe02.gif#align=left&display=inline&height=184&name=11123334.gif&originHeight=184&originWidth=709&size=388726&status=done&width=709)
 
 [官方文档](https://api.flutter.dev/flutter/painting/Alignment-class.html)

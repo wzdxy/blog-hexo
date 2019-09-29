@@ -25,6 +25,8 @@ Primary      : True
 WorkingArea  : {X=0,Y=0,Width=2560,Height=1400}
 ```
 
+<!-- more -->
+
 - 调用 Powershell 执行 magick 命令, 将选中的2张图片合并为一张大图
 ```powershell
  magick.exe convert -size 757x388 -strip xc:none .\1.jpg -geometry +0+0  -composite .\2.jpg -geometry +369+0 -composite  c2.jpg

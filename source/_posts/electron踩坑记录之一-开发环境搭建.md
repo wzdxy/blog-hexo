@@ -16,7 +16,9 @@ permalink: electron-start-1
 npm init # 在空文件夹中初始化项目
 npm i electron -D # 安装 electron 依赖, 注意需要安装为 devDependencies
 ```
--
+
+<!-- more -->
+
 ## 创建主进程和渲染进程文件
 
 ```js

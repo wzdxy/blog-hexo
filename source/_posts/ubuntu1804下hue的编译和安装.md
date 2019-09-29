@@ -22,6 +22,9 @@ mvn -v
 ```
 - 安装 Node.js
 [Ubuntu16.04安装新版本的Nodejs](/2018/07/install-node-in-ubuntu/)
+
+<!-- more -->
+
 - 其他依赖
 ```bash
 apt-get install python2.7-dev \
@@ -47,5 +50,3 @@ sudo apt-get install ant gcc g++ libkrb5-dev libffi-dev libmysqlclient-dev libss
 
 make apps
 ```
-
-##
