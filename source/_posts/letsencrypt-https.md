@@ -19,7 +19,7 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository universe
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install certbot python-certbot-nginx 
+sudo apt-get install certbot python-certbot-nginx
 ```
 
 2. 安装 certbot dnspod 插件
@@ -31,7 +31,7 @@ pip3 install certbot-dns-dnspod
 ```bash
 # 其中 wzdxy.com 就是自己的域名
 sudo certbot certonly -a certbot-dns-dnspod:dns-dnspod --certbot-dns-dnspod:dns-dnspod-credentials ~/dnspod/credentials.ini -d wzdxy.com -d "*.wzdxy.com"
-``` 
+```
 
 3. 记住生成的证书和 key, 在服务器里配置 ssl
 ```ini
@@ -53,5 +53,5 @@ server{
 
 4. 自动续订
 ```
-certbot-auto renew
+sudo certbot renew --dry-run
 ```
