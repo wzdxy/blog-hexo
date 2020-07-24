@@ -49,31 +49,38 @@ export default {
 };
 ```
 
-首先想到的方法是正则提取, 但大家在代码里如何配置路由和参数不太可控, 可能出现提取错误, 而且不同 api 下的接口也不容易判断.
+首先想到的方法是正则提取, 但大家在代码里如何配置路由和参数不太可控, 可能出现提取错误, 也不容易判断哪个接口所属那个 api 下.
 
-因此采用 AST 解析的方式, 也许更准确也更优雅.
+因此采用 AST 解析的方式, 更准确也更优雅的提取, 也对物料开发有更少的限制.
 
 ## 依赖的工具
 
 babel 是一个前端工程中很常用的工具, 其作用就是用将使用未来新语法的代码解析成 AST (Abstract Syntax Tree 抽象语法树), 然后转换成已经被浏览器兼容的语法, 再将其生成代码.
 
-而 babel 是由多个工具组成的, 我们这次可以用以下工具实现这个功能.
+而 babel 是由多个工具组成的, 本次实现这个功能用到了以下工具:
 
-- parser AST 解析器
-- generator 代码生成器
-- traverse 转换器
-- types AST 节点类型
+- parser (AST 解析器)
+- generator (代码生成器)
+- traverse (转换器)
+- types AST (节点类型)
 
-首先是代码解析成 AST 树, 很简单
+## 解析
 
-```
-const codeString = fs.readFileSync(apiFilePath, 'utf-8')
-const ast = parser.parse(codeString, { ecmaVersion: 2020, sourceType: 'module' })
+将代码解析成 AST 树, 很简单:
+
+```js
+const parser = require("@babel/parser");
+const codeString = fs.readFileSync(apiFilePath, "utf-8");
+const ast = parser.parse(codeString, {
+  ecmaVersion: 2020,
+  sourceType: "module",
+});
 ```
 
 遍历 AST, 找到配置 ajax 请求 url 的地方, 将存储到对应的数组中
 
 ```js
+const traverse = require("@babel/traverse").default;
 let parentChain = []; // 在深度优先遍历中记录所有祖先node
 let mApiList = []; // 存储 mApi 的 URL 地址
 let adminApiList = []; // 存储 adminApi 的 URL 地址
@@ -120,13 +127,18 @@ function getApiObjectName(parentChain) {
 }
 ```
 
-`@babel/traverse` 的 enter 方法提供的回调参数里只能拿到 当前 node 和 parent node, 无法直接得知它属于哪个 api 对象.
+这里存在一个问题. `@babel/traverse` 的 enter 方法提供的回调参数里只能拿到 当前 node 和 parent node, 因此无法直接得知它属于哪个 api 对象.
 
-这里为了做出判断, 维护一个 `parentChain` 栈, 记录深度优先遍历过程中的所有父级节点, 在判断时就可以根据这个栈找到它的祖先节点.
+为了做出判断, 维护一个 `parentChain` 栈, 记录深度优先遍历过程中的所有父级节点, 在判断时就可以根据这个栈找到它的祖先节点.
 
-拿到 `mApiList` 和 `adminApiList` 数组后, 就可以生成配置了. 这里使用 `@babel/generator` 工具.
+## 创建代码
+
+拿到 `mApiList` 和 `adminApiList` 数组后, 就可以生成配置了.
+
+这一步拼接字符串也可以实现, 但为了更好的理解 AST, 就遍历数组再次创建一个 AST, 使用 `@babel/generator` 生成 JS 代码.
 
 ```js
+const generator = require("@babel/generator").default;
 // 根据配置列表依次生成代理列表的 ast node
 const code = generator(
   t.program([
@@ -184,7 +196,7 @@ function createAstNodeOfProxyItem(api, target, cookie) {
 }
 ```
 
-这样生成源码后, 将其写入到 js 文件即可.
+得到源码后, 将其写入到 js 文件.
 
 ```js
 fs.writeFileSync(
