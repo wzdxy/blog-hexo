@@ -13,7 +13,9 @@ PowerTools 是一个 VSCode 插件, 可以让用户随时编写自己的脚本, 
 - vscode
 
 ## 一、 安装
-[](https://marketplace.visualstudio.com/items?itemName=ego-digital.vscode-powertools)
+[ego-digital.vscode-powertools](https://marketplace.visualstudio.com/items?itemName=ego-digital.vscode-powertools)
+
+![](https://static.wzdxy.com//img/Code_VCt9E3tfVC.png)
 
 ## 二、 配置
 
