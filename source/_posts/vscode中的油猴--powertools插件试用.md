@@ -7,7 +7,7 @@ permalink: powertools-start
 
 ## 简介
 PowerTools 是一个 VSCode 插件, 可以让用户随时编写自己的脚本, 并能很方便地在 VSCode 中运行, 而且支持 VSCode 扩展的 API.
-下面来使用 PowerTools 实现一个 px 转 rpx 的小功能.
+下面来使用 PowerTools 实现一个半自动 px 转 rpx 的快捷功能.
 
 ## 使用条件
 - vscode
