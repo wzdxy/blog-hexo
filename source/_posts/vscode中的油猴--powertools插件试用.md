@@ -2,6 +2,7 @@
 title: vscode中的油猴--powertools插件试用
 date: 2020-09-09 09:43:38
 tags:
+permalink: powertools-start
 ---
 
 ## 简介
