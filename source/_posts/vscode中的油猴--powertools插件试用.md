@@ -1,20 +1,21 @@
 ---
-title: vscode中的油猴--powertools插件试用
+title: VSCode中的油猴--powertools插件试用
 date: 2020-09-09 09:43:38
 tags:
 permalink: powertools-start
 ---
 
 ## 简介
-PowerTools 是一个 VSCode 插件, 可以让用户随时编写自己的脚本, 并能很方便地在 VSCode 中运行, 而且支持 VSCode 扩展的 API.
-下面来使用 PowerTools 实现一个半自动 px 转 rpx 的快捷功能.
+Power Tools 是一个 VSCode 插件, 可以让用户随时编写自己的脚本, 并能很方便地在 VSCode 中运行, 而且支持 VSCode 扩展的 API.
+下面来使用 Power Tools 实现一个半自动 px 转 rpx 的快捷功能.
 
 ## 使用条件
-- vscode
+- VSCode
+- Power Tools 插件
 
 ## 一、 安装
-[ego-digital.vscode-powertools](https://marketplace.visualstudio.com/items?itemName=ego-digital.vscode-powertools)
-
+直接从 [ego-digital.vscode-powertools](https://marketplace.visualstudio.com/items?itemName=ego-digital.vscode-powertools) 安装
+或在VSCode中搜索
 ![](https://static.wzdxy.com//img/Code_VCt9E3tfVC.png)
 
 ## 二、 配置
@@ -23,7 +24,7 @@ PowerTools 是一个 VSCode 插件, 可以让用户随时编写自己的脚本, 
 
 ![](https://static.wzdxy.com/img/M8MeV2WaSw.png)
 
-### 在底部添加配置
+### 在底部添加配置, 创建一个名为 `px2rpx` 的命令， 并指向 `px2rpx.js` 文件
 
 ```JSON
 "ego.power-tools": {
@@ -69,12 +70,13 @@ exports.execute = async (args) => {
 
 ## 三、试用
 
-配置完成后, 在 vscode 左下角就可以看到一个按钮, 首先选中代码中的 `12px`, 点击按钮, `12px` 就会变成 `24rpx` 了.
+配置完成后, 在 VSCode 左下角会出现一个按钮, 选中代码中的 `12px`, 点击按钮, `12px` 就会被替换成 `24rpx` 了.
 ![](https://static.wzdxy.com/img/vUvwZNo4dq.png)
 
 ## 四、配置快捷键
 
 点击鼠标很不方便, 我们可以为这段脚本配置一个快捷键.
-在 `File-Preference-Keyborad Shorcuts` 中, 搜索 `px2rpx`, 双击即可设置快捷键, 我们设置为 `Ctrl + Alt + Shift + A`.
-现在就可以流畅快速的操作了.
+在 `File-Preference-Keyborad Shorcuts` 中, 搜索 `px2rpx`, 双击设置一个快捷键, 我设置为了 `Ctrl + Alt + Shift + A`.
+现在就可以流畅快速的操作了, 只需要`双击鼠标-按快捷键-双击鼠标-按快捷键`.
+
 ![](https://static.wzdxy.com/img/px2rpx.gif)
