@@ -18,6 +18,8 @@ Power Tools 是一个 VSCode 插件, 可以让用户随时编写自己的脚本,
 或在VSCode中搜索
 ![](https://static.wzdxy.com//img/Code_VCt9E3tfVC.png)
 
+<!-- more -->
+
 ## 二、 配置
 
 ### F1启动命令窗口， 输入 settings 搜索， 选择 settings（JSON）
